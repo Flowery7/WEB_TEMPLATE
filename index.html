@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="All In One Property & Roof Care | Maintenance Specialists" />
+    <meta property="og:description" content="Licensed professionals providing top-quality." />
+    <meta property="og:image" content="Social.png" />
+    <meta property="og:url" content="https://www." />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="All In One Property & Roof Care" />
+    <meta name="twitter:description" content="Licensed professionals providing top-quality." />
+    <meta name="twitter:image" content="Social.png" />
+
+    <!-- Robots and Indexing -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    
+    <link rel="canonical" href="https://www.">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#d10000">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+
+  
+      
+          
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Structured Data for SEO -->
+          <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Prime Property Care",
+              "image": "https://yourwebsite.com/logo.jpg",
+              "@id": "https://yourwebsite.com",
+              "url": "https://yourwebsite.com",
+              "telephone": "+441234567890",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "123 Maintenance Way",
+                "addressLocality": "London",
+                "postalCode": "SW1A 1AA",
+                "addressCountry": "UK"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "51.5074",
+                "longitude": "0.1278"
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
+                "opens": "08:00",
+                "closes": "18:00"
+              },
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "London"
+                },
+                {
+                  "@type": "AdministrativeArea",
+                  "name": "Greater London"
+                }
+              ],
+              "sameAs": [
+                "https://www.facebook.com/yourpage",
+                "https://www.instagram.com/yourprofile"
+              ]
+            }
+          </script>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 shadow-lg z-50 hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="md:flex items-center justify-between">
+          <div class="mb-4 md:mb-0 md:mr-8">
+            <p class="text-gray-300">We use cookies to enhance your experience. By continuing, you agree to our <a href="privacy.html" class="text-primary hover:underline">Privacy Policy</a>.</p>
+          </div>
+          <div class="flex space-x-4">
+            <button id="acceptCookies" class="bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded-md text-sm transition duration-300">
+              Accept
+            </button>
+            <button id="rejectCookies" class="bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-md text-sm transition duration-300">
+              Reject
+            </button>
+          </div>
+        </div>
+      </div>
+    </di
+  
+    <script>
+    // Cookie consent logic
+    document.addEventListener('DOMContentLoaded', function() {
+      const cookieBanner = document.getElementById('cookieBanner');
+      const acceptBtn = document.getElementById('acceptCookies');
+      const rejectBtn = document.getElementById('rejectCookies');
+      
+      // Check for existing preference
+      const cookieConsent = getCookie('cookies_accepted');
+      
+      if (cookieConsent === 'true') {
+        cookieBanner.style.display = 'none';
+        loadCookies();
+      } else if (cookieConsent === 'false') {
+        cookieBanner.style.display = 'none';
+        blockCookies();
+      } else {
+        cookieBanner.style.display = 'block';
+      }
+
+      // Accept handler
+      acceptBtn.addEventListener('click', function() {
+        setCookie('cookies_accepted', 'true', 365);
+        cookieBanner.style.display = 'none';
+        loadCookies();
+      });
+
+      // Reject handler
+      rejectBtn.addEventListener('click', function() {
+        setCookie('cookies_accepted', 'false', 365);
+        cookieBanner.style.display = 'none';
+        blockCookies();
+      });
+
+      // Cookie helper functions
+      function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+      }
+
+      function getCookie(name) {
+        const value = "; " + document.cookie;
+        const parts = value.split("; " + name + "=");
+        if (parts.length === 2) return parts.pop().split(";").shift();
+      }
+
+      // Cookie-dependent scripts
+      function loadCookies() {
+        // Load Google Analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        const gaScript = document.createElement('script');
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YOUR-ID';
+        gaScript.async = true;
+        document.head.appendChild(gaScript);
+        
+        gtag('config', 'G-YOUR-ID');
+      }
+
+      function blockCookies() {
+        // Implement any cookie-blocking logic here
+        console.log("Non-essential cookies blocked");
+      }
+    });
+    </script>
+</body>
+</html>
